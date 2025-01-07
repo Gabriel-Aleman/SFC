@@ -42,6 +42,9 @@ for jug in jugadoresEnComun:
         for i,crit in enumerate(arrValues):
             CritLabel= crit
             CritValue= round(df0j[crit], 1)
+            Delta= round(float(df1j[crit])- float(df0j[crit]),1)
+
+            cols[i].metric(CritLabel, CritValue, Delta)
 
 
 
